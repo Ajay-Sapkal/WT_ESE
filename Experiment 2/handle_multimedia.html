@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia Elements in HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+        }
+        h1, h2 {
+            color: #4CAF50;
+            text-align: center;
+        }
+        img, video, iframe {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        audio {
+            width: 100%;  /* Set to 100% width */
+            margin: 20px 0; /* Added margin for spacing */
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            display: block; /* Ensure it behaves like a block element */
+        }
+        video {
+            width: 100%;  /* Set to 100% of the container */
+            height: 450px; /* Fixed height for the video */
+        }
+        .youtube-video {
+            width: 100%;  /* Set to 100% of the container */
+            height: 450px; /* Fixed height for the YouTube video */
+            margin-bottom: 20px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Handling Multimedia Elements</h1>
+
+        <h2>1. Images</h2>
+        <p>Here is an example of an image:</p>
+        <img src="assets/img.jpg" alt="Placeholder Image">
+
+        <h2>2. Audio</h2>
+        <p>Click the play button to listen to the audio:</p>
+        <audio controls>
+            <source src="assets/old_ek_ajnabee_haseena_se.mp3" type="audio/mpeg">
+        </audio>
+
+        <h2>3. Video</h2>
+        <p>Watch the video below:</p>
+        <video controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        </video>
+
+        <h2>4. YouTube Video</h2>
+        <p>Here's an embedded YouTube video:</p>
+        <iframe class="youtube-video" src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
+    </div>
+
+</body>
+</html>

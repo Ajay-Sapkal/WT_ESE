@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #007BFF;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 20px;
+            padding: 10px;
+            border: 1px solid #007BFF;
+            border-radius: 5px;
+            background-color: white;
+            width: 300px;
+            text-align: center;
+        }
+        input[type="text"] {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #007BFF;
+            border-radius: 5px;
+            width: 300px;
+        }
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #0056b3;
+        }
+        #hoverText {
+            margin-top: 30px;
+            font-size: 18px;
+            padding: 10px;
+            transition: color 0.3s, transform 0.3s;
+        }
+        #hoverText:hover {
+            color: #FF5733;
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Event Handling in JavaScript</h1>
+    
+    <button id="changeTextButton">Change Text</button>
+    <p id="output">This is the original text.</p>
+
+    <input type="text" id="textInput" placeholder="Type something...">
+
+    <p id="hoverText">Hover over me!</p>
+
+    <script>
+        // Get references to the DOM elements
+        const changeTextButton = document.getElementById('changeTextButton');
+        const output = document.getElementById('output');
+        const textInput = document.getElementById('textInput');
+        const hoverText = document.getElementById('hoverText');
+
+        // Event handler for button click
+        changeTextButton.addEventListener('click', function() {
+            output.textContent = "The text has been changed!";
+        });
+
+        // Event handler for input field
+        textInput.addEventListener('input', function() {
+            output.textContent = `You typed: ${textInput.value}`;
+        });
+
+        // Event handler for hover text
+        hoverText.addEventListener('mouseover', function() {
+            output.textContent = "You hovered over the text!";
+        });
+
+        hoverText.addEventListener('mouseout', function() {
+            output.textContent = "This is the original text.";
+        });
+    </script>
+</body>
+</html>
